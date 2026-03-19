@@ -1,0 +1,71 @@
+.features-bar {
+  background: #2F1300;
+  padding: 0 45px;
+  position: relative;
+  z-index: 5;
+  margin-top: -80px;
+}
+
+.features-inner {
+  background: rgba(212, 212, 212, 0.1);
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 32px 20px;
+  gap: 24px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.feature-title {
+  font-family: 'Freeman', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.feature-desc {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #FFFFFF;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.btn-discover {
+  background: #FFBB00;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+
+.btn-discover:hover {
+  background: #e6a800;
+  transform: translateY(-1px);
+}
