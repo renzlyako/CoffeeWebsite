@@ -27,7 +27,7 @@ export default function VisionMission() {
               To provide an engaging platform that shares our passion for coffee, highlights sustainable farming
               practices, and connects our community to the stories, people, and care behind every bean.
             </p>
-            <button className="btn-primary vm-btn">Read More</button>
+            <button className="btn-readmore">Read More</button>
           </div>
         </div>
       </div>

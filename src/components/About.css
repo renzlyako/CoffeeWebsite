@@ -2,28 +2,10 @@
   position: relative;
   background: #2F1300;
   min-height: 600px;
-  overflow: hidden;
 }
 
-.about-bg-image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-}
-
-.about-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.about-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(47, 19, 0, 0.6);
+.about-bg-img-wrapper {
+  display: none;
 }
 
 .about-content-wrapper {
@@ -34,7 +16,7 @@
   max-width: 1350px;
   margin: 0 auto;
   padding: 80px 60px;
-  gap: 60px;
+  gap: 120px;
 }
 
 .about-left {
@@ -50,7 +32,28 @@
   font-size: 16px;
   line-height: 1.7;
   color: #FFFFFF;
-  text-align: right;
+  text-align: left;
+  margin: 0;
+}
+
+.btn-readmore {
+  background: #DAA520;
+  color: #2F1300;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+.btn-readmore:hover {
+  background: #f0b830;
+  transform: translateY(-1px);
 }
 
 .about-right {
@@ -61,17 +64,30 @@
 }
 
 .about-img-frame {
-  border: 19px solid #FFFFFF;
+  border: none;
   overflow: hidden;
-  width: 450px;
-  height: 320px;
+  width: 550px;
+  height: 420px;
+  background: transparent;
+  padding: 0;
+  position: relative;
 }
 
 .about-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
 }
+
+.default-img { opacity: 1; }
+.hover-img { opacity: 0; }
+
+.about-img-frame:hover .default-img { opacity: 0; }
+.about-img-frame:hover .hover-img { opacity: 1; }
 
 .section-title-freeman {
   font-family: 'Freeman', sans-serif;
@@ -81,10 +97,47 @@
   margin: 0;
 }
 
-.white {
-  color: #FFFFFF;
-}
+.white { color: #FFFFFF; }
 
-.dark {
-  color: #180F09;
+/* ── Responsive: mobile ── */
+@media (max-width: 768px) {
+  .about-section {
+    min-height: 500px;
+    overflow: hidden;
+  }
+
+  .about-bg-img-wrapper {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .about-bg-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3; 
+  }
+
+
+  .about-right {
+    display: none;
+  }
+
+  .about-content-wrapper {
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    padding: 48px 24px;
+    gap: 20px;
+  }
+
+  .section-title-freeman {
+    font-size: 42px;
+  }
+
+  .about-quote {
+    font-size: 15px;
+  }
 }

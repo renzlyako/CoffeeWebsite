@@ -7,12 +7,13 @@
 }
 
 .features-inner {
-  background: rgba(212, 212, 212, 0.1);
+  background: transparent;
+  border: none;
   border-radius: 18px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 32px 20px;
+  padding: 36px 20px;
   gap: 24px;
 }
 
@@ -22,14 +23,25 @@
   align-items: center;
   text-align: center;
   flex: 1;
-  gap: 8px;
-  padding: 0 12px;
+  gap: 10px;
+  padding: 20px 16px;
+  transition: background 0.2s;
+  border-radius: 14px;
 }
 
-.feature-icon {
-  width: 60px;
-  height: 40px;
-  object-fit: contain;
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feature-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(218, 165, 32, 0.18);
+  border: 1.5px solid rgba(218, 165, 32, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 4px;
 }
 
@@ -41,31 +53,58 @@
   margin: 0;
 }
 
+.feature-divider {
+  width: 36px;
+  height: 2px;
+  background: #DAA520;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
 .feature-desc {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
   margin: 0;
-  white-space: pre-line;
 }
 
 .btn-discover {
-  background: #FFBB00;
-  color: #FFFFFF;
+  background: #DAA520;
+  color: #2F1300;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  padding: 6px 20px;
+  font-size: 14px;
+  padding: 8px 22px;
   cursor: pointer;
   transition: background 0.2s, transform 0.15s;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .btn-discover:hover {
-  background: #e6a800;
+  background: #f0b830;
   transform: translateY(-1px);
+}
+
+/* ── Responsive: stack cards top to bottom on mobile ── */
+@media (max-width: 768px) {
+  .features-bar {
+    padding: 0 20px;
+    margin-top: -40px;
+  }
+
+  .features-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 12px;
+    gap: 16px;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 360px;
+  }
 }

@@ -5,10 +5,9 @@
 }
 
 body {
+  background-color: #2F1300;
   margin: 0;
   padding: 0;
-  background: #FFFFFF;
-  overflow-x: hidden;
 }
 
 .app {
@@ -19,9 +18,10 @@ body {
 
 .hero-wrapper {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Shared button utilities referenced by all components */
 .btn-primary {
   background: #FFBB00;
   color: #FFFFFF;

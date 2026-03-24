@@ -46,7 +46,7 @@ export default function ConsumerInsights() {
         <h2 className="insights-title">Consumer Insights</h2>
         <div className="insights-reviews">
           <button className="nav-arrow left-arrow" onClick={prev} aria-label="Previous">
-            <img src="https://cdn.codia.ai/figma/4m4FRFl7ReqcrYDfHoTY0L/img-009c5430650b4980.svg" alt="prev" className="arrow-circle" />
+            &#8592;
           </button>
 
           <div className="review-pair">
@@ -73,7 +73,7 @@ export default function ConsumerInsights() {
           </div>
 
           <button className="nav-arrow right-arrow" onClick={next} aria-label="Next">
-            <img src="https://cdn.codia.ai/figma/4m4FRFl7ReqcrYDfHoTY0L/img-73d03dbe2fcf7605.svg" alt="next" className="arrow-circle" />
+            &#8594;
           </button>
         </div>
       </div>

@@ -3,6 +3,16 @@ import './MeetFarmers.css';
 export default function MeetFarmers() {
   return (
     <section className="farmers-section" id="farmers">
+
+      {}
+      <div className="farmers-mobile-bg">
+        <img
+          src="https://cdn.codia.ai/figma/4m4FRFl7ReqcrYDfHoTY0L/img-6180bc9fc25d3ae2.png"
+          alt=""
+          className="farmers-mobile-bg-img"
+        />
+      </div>
+
       <div className="farmers-inner">
         <div className="farmers-top">
           <h2 className="farmers-title">Meet our Farmers</h2>
@@ -14,7 +24,9 @@ export default function MeetFarmers() {
                 Their expertise, passed down through generations, ensures every batch of coffee meets the highest
                 standards of quality and flavor.
               </p>
-              <button className="btn-primary farmers-more-btn">Read More &gt;&gt;</button>
+              <div className="farmers-btn-wrapper">
+                <button className="btn-readmore">Read More</button>
+              </div>
             </div>
             <div className="farmers-hero-img">
               <img

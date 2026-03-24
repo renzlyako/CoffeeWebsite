@@ -1,12 +1,26 @@
 .farmers-section {
   background: #FFFFFF;
   padding: 60px 0 80px;
+  position: relative;
+}
+
+.farmers-mobile-bg {
+  display: none;
+}
+
+.farmers-mobile-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
 }
 
 .farmers-inner {
   max-width: 1350px;
   margin: 0 auto;
   padding: 0 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .farmers-title {
@@ -31,6 +45,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 300px;
 }
 
 .farmers-intro-text p {
@@ -40,14 +57,22 @@
   line-height: 1.7;
   color: #2F1300;
   text-align: right;
+  width: 100%;
 }
 
 .farmers-more-btn {
-  align-self: flex-start;
+  align-self: flex-end;
 }
 
 .farmers-hero-img {
   flex: 0 0 auto;
+}
+
+.farmers-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
 }
 
 .farmers-photo {
@@ -96,4 +121,78 @@
   font-size: 16px;
   line-height: 1.7;
   color: #2F1300;
+}
+
+.btn-readmore {
+  background: #DAA520;
+  color: #2F1300;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  align-self: flex-start;
+}
+
+.btn-readmore:hover {
+  background: #f0b830;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width: 768px) {
+  .farmers-section {
+    background: #2F1300;
+    padding: 48px 0 60px;
+    overflow: hidden;
+  }
+
+  .farmers-mobile-bg {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .farmers-hero-img,
+  .pedro-img-col {
+    display: none;
+  }
+
+  .farmers-inner {
+    padding: 0 24px;
+  }
+
+  .farmers-title {
+    font-size: 42px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+
+  .farmers-top-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .farmers-intro-text {
+    min-height: unset;
+    align-items: flex-start;
+  }
+
+  .farmers-intro-text p {
+    text-align: left;
+    color: #FFFFFF;
+  }
+
+  .farmers-btn-wrapper {
+    justify-content: flex-start;
+  }
+
+  .pedro-section {
+    display: none;
+  }
 }

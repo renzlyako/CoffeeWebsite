@@ -19,7 +19,7 @@ export default function TeamStories() {
           &apos;From Farm to Cup&apos; celebrates the people who make Heart &amp; Bean extraordinary.
           Meet the hands and hearts behind your favorite brews and discover their stories, dedication, and love for coffee.
         </p>
-        <button className="btn-primary">Read More</button>
+        <button className="btn-readmore">Read More</button>
       </div>
     </section>
   );
